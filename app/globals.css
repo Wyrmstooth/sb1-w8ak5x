@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 213 31% 91%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+    --ring: 216 34% 17%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.sidebar-icon {
+  @apply w-6 h-6 text-muted-foreground;
+}
+
+.featured-offer {
+  @apply relative overflow-hidden rounded-lg;
+}
+
+.featured-offer img {
+  @apply w-full h-auto object-cover;
+}
+
+.featured-offer-overlay {
+  @apply absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4;
+}
+
+.featured-offer-title {
+  @apply text-white font-bold text-lg;
+}
+
+.featured-offer-subtitle {
+  @apply text-gray-300 text-sm;
+}
+
+.featured-offer-reward {
+  @apply absolute top-2 left-2 bg-yellow-400 text-black font-bold px-2 py-1 rounded-full text-xs;
+}
+
+.featured-offer-button {
+  @apply absolute bottom-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold;
+}
